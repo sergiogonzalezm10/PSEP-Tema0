@@ -1,0 +1,6 @@
+from olimpiadas import *
+
+if __name__ == "__main__":
+    print("Proyecto olimpiadas")
+    registros=leer_fichero('./data/atletas.txt')
+    print(registros)
