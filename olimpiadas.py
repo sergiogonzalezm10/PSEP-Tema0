@@ -27,3 +27,13 @@ def edad_media(registros):
     for r in registros:
         res+=r.edad
     return res/len(registros)
+
+def num_atletas_por_pais(registros):
+    diccionario = {}
+    for e in registros:
+        clave = e.pais
+        if clave in diccionario:
+            diccionario[clave] = diccionario[clave] + 1
+        else:
+            diccionario[clave] = 1
+    return diccionario

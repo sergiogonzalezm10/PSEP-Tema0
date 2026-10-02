@@ -13,4 +13,5 @@ if __name__ == "__main__":
     print("Proyecto olimpiadas")
     registros=leer_fichero('./data/atletas.txt')
     test_lee_fichero(registros)
-    
+    print(edad_media(registros))
+    print(num_atletas_por_pais(registros))
