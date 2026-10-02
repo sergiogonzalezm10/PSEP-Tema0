@@ -37,3 +37,14 @@ def num_atletas_por_pais(registros):
         else:
             diccionario[clave] = 1
     return diccionario
+
+def nombre_atletas_por_pais(registros):
+    diccionario = {}
+    for r in registros:
+        if r.pais not in diccionario:
+            diccionario[r.pais] = []
+        diccionario[r.pais].append(r.nombre)
+    return diccionario
+
+def atleta_mayor_peso(registros):
+    return max(registros, key=lambda r:r.peso).nombre
