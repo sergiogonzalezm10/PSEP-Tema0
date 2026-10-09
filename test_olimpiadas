@@ -17,3 +17,5 @@ if __name__ == "__main__":
     print(num_atletas_por_pais(registros))
     print(nombre_atletas_por_pais(registros))
     print(atleta_mayor_peso(registros))
+    print(pais_mayor_peso_medio(registros))
+    print(metodozip(registros))

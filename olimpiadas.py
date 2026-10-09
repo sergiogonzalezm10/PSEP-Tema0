@@ -48,3 +48,18 @@ def nombre_atletas_por_pais(registros):
 
 def atleta_mayor_peso(registros):
     return max(registros, key=lambda r:r.peso).nombre
+
+def pais_mayor_peso_medio(registros):
+    pesos_por_pais = {}
+    for r in registros:
+        if r.pais not in pesos_por_pais:
+            pesos_por_pais[r.pais] = []
+        pesos_por_pais[r.pais].append(r.peso)
+    
+    peso_medio = {pais: sum(pesos) / len(pesos) for pais, pesos in pesos_por_pais.items()}
+    return max(peso_medio, key=peso_medio.get)
+
+def metodozip(registros):
+    ordenados = sorted(registros, key=lambda r: r.edad)
+    diferencias = [b.edad - a.edad for a, b in zip(ordenados, ordenados[1:])]
+    return max(diferencias) if diferencias else 0
